@@ -1,5 +1,6 @@
 Config = {}
 
+Config.Lang = "fr"
 Config.ControlMenu = 167 -- F6
 
 Config.Categories = {

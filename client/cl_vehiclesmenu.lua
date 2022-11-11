@@ -25,7 +25,7 @@ end
 local function CreateVehicleItems(submenu, category, vehicles)
     for i, veh in pairs(vehicles) do
         if veh.category == category.name then
-            submenu:AddItem(NativeUI.CreateItem(veh.name, ""))
+            submenu:AddItem(NativeUI.CreateItem(veh.name, veh.model))
         end
     end
 end
@@ -33,7 +33,7 @@ end
 local function ActionVehiclesItems(submenu, vehicles)
     submenu.OnItemSelect = function(sender, item, index)
         for index, veh in pairs(vehicles) do
-            if item.Text._Text == veh.name then
+            if item._Description == veh.model then
                 local hash = LoadModel(veh.model)
                 SpawnVehicle(hash)
             end
@@ -51,7 +51,7 @@ end
 
 local function CreateVehiclesMenu()
     local menuPool = NativeUI.CreatePool()
-    local vehiclesMenu = NativeUI.CreateMenu("Vehicles Menu", "~b~Spawn your service vehicle.")
+    local vehiclesMenu = NativeUI.CreateMenu(Language[Config.Lang]["menu_title"], Language[Config.Lang]["menu_desc"])
     menuPool:Add(vehiclesMenu)
 
     CreateVehiclesCategories(menuPool, vehiclesMenu, Config.Categories, Config.VehiclesList)

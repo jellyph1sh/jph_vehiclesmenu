@@ -21,3 +21,7 @@ Vehicle spawn menu.
 - *Vehicles menu.*
 - *Categories config.*
 - *Vehicles config.*
+
+### **Version 1.1 :**
+- *Languages config.*
+- *Fix bug. (multiple vehicles spawning)*

@@ -1,7 +1,7 @@
 fx_version "cerulean"
 game "gta5"
 
-version "1.0"
+version "1.1"
 description "Vehicle spawn menu."
 author "Time_XP"
 
@@ -12,6 +12,9 @@ client_scripts {
 
 server_script "server/sv_vehiclesmenu.lua"
 
-shared_script "shared/config.lua"
+shared_scripts {
+    "shared/config.lua",
+    "shared/language.lua"
+}
 
 dependency "NativeUI"
