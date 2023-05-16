@@ -3,7 +3,7 @@ game "gta5"
 
 version "1.1"
 description "Vehicle spawn menu."
-author "Time_XP"
+author "Jellyph1sh"
 
 client_scripts {
     "@NativeUI/NativeUI.lua",
